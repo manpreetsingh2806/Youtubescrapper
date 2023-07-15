@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Videos Page</title>
+</head>
+
+<body style="background-color: lightblue">
+
+
+<h1 style="text-align:center; color:blue; font-size: 3.0em">Youtube Channel Analysis using Python</h1>
+<h1 style="text-align:center; color:blue; font-size: 1.5em">Videos Section</h1>
+
+<style>    
+table, th, td {    
+border: 1px solid black;  
+margin-left: auto;  
+margin-right: auto;  
+border-collapse: collapse;    
+width: 500px;  
+text-align: center;  
+font-size: 20px; 
+cellspacing="0"
+}    
+</style>  
+<table >
+    
+	  <tr>
+         <th width="100">Creator Name</th>
+         <th width="100">Title</th>
+         <th width="100">Thumbnail Url</th>
+         <th width="100">Video ID</th>
+		 <th width="100">Video Url</th>
+		 <th width="100">Likes</th>
+		 <th width="100">Number of comments</th>
+		 <th width="100">Comments</th>
+		 <th width="100">Download video</th>
+      </tr>
+         
+		 {% for i in range(count) %}
+      <tr>
+	  
+         <td>{{fetched_data['Creater_name'][i]}}</td>
+         <td>{{fetched_data['title'][i]}}</td>
+         <td>{{fetched_data['thumbnail_url'][i]}}</td>
+         <td >{{fetched_data['videoid'][i]}}</td>
+         <td>{{fetched_data['video_url'][i]}} </td>
+		 <td>{{fetched_data['like'][i]}} </td>
+		 <td>{{fetched_data['comment_count'][i]}} </td>
+		 <td><a href="/video_comments/{{fetched_data['videoid'][i]}}">Click here to see comments</a></td>
+		 <td><a href="/download/{{fetched_data['videoid'][i]}}">Click here to download video</a></td>
+		
+      </tr>
+		{% endfor %}
+</table>	  
+	
+
+</body>
+
+</html>

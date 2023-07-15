@@ -1,0 +1,46 @@
+
+<!doctype html>
+<html lang=en>
+<head>
+
+<title>Python Project </title>
+
+</head>
+
+<style>
+a {    
+	text-align:right; 
+	float: right;
+	color:black; 
+	font-size: 1.0em"
+}    
+</style>  
+
+<a href="https://github.com/manpreetsingh2806/Youtubescrapper">See on Github</a>
+
+<body style="background-color: lightblue">
+ 
+  
+  
+  <h1 style="text-align:center; color:blue; font-size: 3.0em">Youtube Channel Analysis using Python</h1>
+  
+  <form action="/extract" method="POST" style="text-align:left; color:blue;font-size: 1.3em ">
+	<label for="channel url">Please enter youtube channel URL:</label>
+	<input type="text" id="url" name="url"></input><br>
+	<label for="video count">Please enter number of videos to fetch, max should be 50:</label>
+	<input type = "number" name = "video_count" id = "video_count"  min = "1" max = "50"></input>
+ 	<input type="submit" value="Submit"> <br> </input>
+	<br>
+	<p style="text-align:left;color:black; font-size: 0.65em ">
+	channel URL should be in the following format only:https://www.youtube.com/@channelname/videos<br>
+	for example: <br>
+	https://www.youtube.com/@tseries/videos<br>
+	https://www.youtube.com/@NatGeoWild/videos<br>
+	</p>
+
+
+  
+  </form>
+</body>
+
+</html>
