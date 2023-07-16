@@ -43,10 +43,6 @@ def videos_uploaded(channel_id):
     videos_count=request['items'][0]["statistics"]["videoCount"]
     return videos_count
 
-#dictionary to store all related information to a channel
-data = {'Creater_name': [], 'title': [], 'thumbnail_url': [], 'videoid': [], 'video_url': [], 'like': [],
-        'comment_count': []}
-
 
 def fetch_data(url: str, count: int):
     """
@@ -54,6 +50,10 @@ def fetch_data(url: str, count: int):
     :param count: no of videos you want to fetch
     :return: dictionary with youtube channel information of videos
     """
+    # dictionary to store all related information to a channel
+    global data
+    data = {'Creater_name': [], 'title': [], 'thumbnail_url': [], 'videoid': [], 'video_url': [], 'like': [],
+                   'comment_count': []}
     channel_id = fetch_channel_id(url)
     upload_playlistid = fetch_uploadplaylist_id(channel_id)
     videos = videos_uploaded(channel_id)
