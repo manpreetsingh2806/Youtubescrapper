@@ -1,6 +1,6 @@
 # **Youtube Scrapper project**
 
-##Using this project:
+## Using this project:
 
 *HomePage*
 
@@ -26,3 +26,12 @@ It shows the following information for the channel input:
 *Comments Section*
 
 It shows the top level comments and respective replies if any on that comment
+
+
+As part of Inueron chanllenge, data is fetched for 4 channels
+1. Krish Naik
+2. Hitesh Choudhary
+3. mysirg.com
+4. Telusko
+
+For them I retrieved data and stored in MySql and MongoDB, but the application can be used to fetch data from any channel
